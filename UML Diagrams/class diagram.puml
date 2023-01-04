@@ -1,0 +1,72 @@
+@startuml
+title Pet Sitter - Class Diagram
+
+class User {
+    - id: Long
+    - username: String
+    - password: String
+    - address: String
+    - email: String
+    - phone: String
+}
+
+class Pet {
+    - id: Long
+    - name: String
+    - type: PetType
+    - age: int
+    - description: String
+}
+
+enum PetType {
+    DOG
+    CAT
+    BIRD
+    OTHER
+}
+
+class PetImage {
+    - id: Long
+    - url: String
+}
+
+class Post {
+    - id: Long
+    - title: String
+    - description: String
+    - price: double
+    - startDate: Date
+    - endDate: Date
+    - status: PostStatus
+}
+
+enum PostStatus {
+    OPEN
+    CLOSED
+}
+
+class Request {
+    - id: Long
+    - status: RequestStatus
+}
+
+enum RequestStatus {
+    PENDING
+    ACCEPTED
+    REJECTED
+}
+
+User "1" *-- "0,*" Post : Creates
+User "1" *-- "0,*" Pet : Owns
+User "0,*" -- "0,*" Pet : Adopts
+
+User "1" -l- "0,*" Post : Applies to
+(Post, User) -l- Request
+
+Pet "1" *-- "0,*" PetImage : Has
+Pet "1" *-- "0,*" Post : Has
+
+Pet -[hidden]l- PetType
+Post -[hidden]- PostStatus
+Request -[hidden]u- RequestStatus
+@enduml

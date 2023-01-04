@@ -1,0 +1,31 @@
+@startuml
+left to right direction
+
+actor User as user
+actor Visitor as visitor
+
+rectangle "Application" {
+    usecase "Register" as register
+    usecase "Login" as login
+    usecase "View pet sitting posts" as view_pet_sitting_posts
+    usecase "Manage own pet sitting posts" as manage_own_pet_sitting_posts
+    usecase "Adopt pet" as adopt_pet
+    usecase "View pet sitters" as view_pet_sitters
+    usecase "View pet sitters' leaderboard" as view_pet_sitters_leaderboard
+}
+
+visitor <|-l- user
+
+visitor --> register
+visitor --> view_pet_sitting_posts
+visitor --> view_pet_sitters
+visitor --> view_pet_sitters_leaderboard
+
+user --> manage_own_pet_sitting_posts
+user --> adopt_pet
+
+manage_own_pet_sitting_posts ..> login : <<include>>
+adopt_pet ..> login : <<include>>
+
+register <.. login : <<extends>>
+@enduml
