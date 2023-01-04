@@ -4,4 +4,4 @@ pluginManagement {
     }
 }
 
-rootProject.name = 'pet-sitter'
+rootProject.name = 'pet-sitter-api'

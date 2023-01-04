@@ -16,23 +16,16 @@ I'm using a Multi-module architecture with the Hexagonal Architecture pattern fo
 
 ![Hexagonal Architecture](https://reflectoring.io/images/posts/spring-hexagonal/hexagonal-architecture_hu6764515d7030d45af6f7f498c79e292b_50897_956x0_resize_box_3.png)
 
-## Modules
-
-### Backend (Spring Boot)
+### Modules
  
-    pet-sitter (parent)
-    ├──  pet-sitter-api-gateway: Handle all requests and redirect to the right module (reactive, cercuit breaker, ...)
-    ├──  pet-sitter-configuration: Handle configuration (database, security, ...)
-    ├──  pet-sitter-persistence: Handle database access and domain objects (entities)
-    ├──  pet-sitter-authentication: Handle authentication and authorization (login, register)
-    ├──  pet-sitter-pets: Handle pet management (add, update, delete, ...)
-    ├──  pet-sitter-feed: Handle posts management (add, update, delete, ...)
-    ├──  pet-sitter-leaderboard: Handle leaderboard (most active users)
-    └──  pet-sitter-adoption: Handle adoption requests (accept, reject)
-
-### Frontend (Angular)
-
-[//]: # (TODO: Add frontend architecture)
+    pet-sitter-api (parent)
+    ├──  pet-sitter-api-gateway: Redirect requests to the right module (reactive, cercuit breaker, rate limiter, retry, authorization (JWT), and routes registry)
+    ├──  pet-sitter-api-persistence: Handle database access and entities (JPA, mapping)
+    ├──  pet-sitter-api-authentication: Handle authentication (login, register)
+    ├──  pet-sitter-api-pets: Handle pet management (add, update, delete, ...)
+    ├──  pet-sitter-api-feed: Handle posts management (add, update, delete, ...)
+    ├──  pet-sitter-api-leaderboard: Handle leaderboard (get most active users)
+    └──  pet-sitter-api-adoption: Handle adoption requests (get requests, accept, reject)
 
 ## Technologies
 
@@ -53,10 +46,6 @@ I'm using a Multi-module architecture with the Hexagonal Architecture pattern fo
 - Lombok
 - ModelMapper
 
-### Frontend
-
-[//]: # (TODO: Add frontend technologies)
-
 ### Database
 
 - MySQL
@@ -65,7 +54,6 @@ I'm using a Multi-module architecture with the Hexagonal Architecture pattern fo
 ### Tools
 
 - IntelliJ IDEA
-- Visual Studio Code
 - Postman
 - Git
 - GitHub
