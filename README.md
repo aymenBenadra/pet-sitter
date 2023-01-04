@@ -19,13 +19,31 @@ I'm using a Multi-module architecture with the Hexagonal Architecture pattern fo
 ### Modules
  
     pet-sitter-api (parent)
-    ├──  pet-sitter-api-gateway: Redirect requests to the right module (reactive, cercuit breaker, rate limiter, retry, authorization (JWT), and routes registry)
+    ├──  pet-sitter-api-gateway: Redirect requests to the right module (cercuit breaker, rate limiter, authorization (JWT))
     ├──  pet-sitter-api-persistence: Handle database access and entities (JPA, mapping)
-    ├──  pet-sitter-api-authentication: Handle authentication (login, register)
+    ├──  pet-sitter-api-auth: Handle authentication (login, register)
     ├──  pet-sitter-api-pets: Handle pet management (add, update, delete, ...)
     ├──  pet-sitter-api-feed: Handle posts management (add, update, delete, ...)
     ├──  pet-sitter-api-leaderboard: Handle leaderboard (get most active users)
     └──  pet-sitter-api-adoption: Handle adoption requests (get requests, accept, reject)
+
+### Routes
+
+    /api/v1 (gateway)
+    ├──  / (feed)
+    │   ├──  /                      : [GET, POST]           : Get all posts or create a new one
+    │   ├──  /{postId}              : [GET, PATCH, DELETE]  : Get a post, update it or delete it
+    │   │   └──  /requests (adoption)
+    │   │       ├──  /              : [GET, POST]           : Get all adoption requests or create a new one
+    │   │       └──  /{requestId}   : [GET, PATCH, DELETE]  : Get an adoption request, accept or reject it, or delete it
+    │   └──  /leaderboard (leaderboard)
+    │       └──  /                  : [GET]                 : Get the leaderboard of the most active users
+    ├──  /auth (auth)
+    │   ├──  /login                 : [POST]                : Login
+    │   └──  /register              : [POST]                : Register
+    └──  /pets (pets)
+        ├──  /{ownerId}             : [GET, POST]           : Get all pets of an owner or create a new one
+        └──  /{ownerId}/{petId}     : [GET, PATCH, DELETE]  : Get a pet, update it or delete it
 
 ## Technologies
 

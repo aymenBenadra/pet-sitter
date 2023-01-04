@@ -1,10 +1,30 @@
 plugins {
-    id 'java'
+    id "org.springframework.boot" version "${springBootVersion}" apply false
+    id "io.spring.dependency-management" version "${springDependencyManagementVersion}"
 }
 
-group 'com.sakamoto'
-version '1.0'
+subprojects {
+    apply plugin: "java"
+    apply plugin: "io.spring.dependency-management"
 
-repositories {
-    mavenCentral()
+    repositories {
+        mavenCentral()
+    }
+
+    configurations {
+        compileOnly {
+            extendsFrom annotationProcessor
+        }
+    }
+
+    dependencyManagement {
+        dependencies {
+            dependency "io.github.resilience4j:resilience4j-spring-boot3:${resilience4jVersion}"
+            dependency "io.github.resilience4j:resilience4j-circuitbreaker:${resilience4jVersion}"
+            dependency "io.jsonwebtoken:jjwt-api:${jjwtVersion}"
+            dependency "io.jsonwebtoken:jjwt-impl:${jjwtVersion}"
+            dependency "io.jsonwebtoken:jjwt-jackson:${jjwtVersion}"
+            dependency "org.modelmapper:modelmapper:${modelMapperVersion}"
+        }
+    }
 }

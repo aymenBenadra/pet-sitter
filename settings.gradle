@@ -5,3 +5,5 @@ pluginManagement {
 }
 
 rootProject.name = 'pet-sitter-api'
+include 'gateway'
+

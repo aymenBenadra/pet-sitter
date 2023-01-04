@@ -4,12 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53287dd5-de00-4d79-ad9f-f1c91c6b9bbd" name="Changes" comment="Initial commit of empty project with Gradle">
-      <change afterPath="$PROJECT_DIR$/UML Diagrams/class diagram.puml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UML Diagrams/use case diagram.puml" afterDir="false" />
+    <list default="true" id="53287dd5-de00-4d79-ad9f-f1c91c6b9bbd" name="Changes" comment="Created gateway module to handle Api gateway operations such as security, logging, and redirection.">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/com/sakamoto/gateway/GatewayApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/com/sakamoto/gateway/adapter/in/web/ProxyController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/com/sakamoto/gateway/adapter/out/logging/LoggingAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/com/sakamoto/gateway/application/port/in/RedirectHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/com/sakamoto/gateway/application/service/RedirectHandlerImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/com/sakamoto/gateway/config/WebConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/com/sakamoto/gateway/domain/PredicateDefinition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/com/sakamoto/gateway/domain/RouteDefinition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,6 +39,9 @@
         <task path="$PROJECT_DIR$">
           <activation />
         </task>
+        <task path="$PROJECT_DIR$/gateway">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
@@ -39,6 +53,11 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="pet-sitter-api" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="pet-sitter-api" type="f1a62948:ProjectNode" />
+                <item name="gateway" type="2d1252cf:ModuleNode" />
               </path>
             </expand>
             <select />
@@ -52,7 +71,17 @@
       <list>
         <option value="UML Class" />
         <option value="UML Use Case" />
+        <option value="Record" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="dynamic-routing" />
+      </map>
     </option>
   </component>
   <component name="MarkdownSettingsMigration">
@@ -72,16 +101,28 @@
     "DefaultPlantUmlFileTemplate": "UML Use Case",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "jbr-17",
     "last_opened_file_path": "C:/Users/youcode/IdeaProjects/pet-sitter-api",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "spring.configuration.checksum": "4426be60cc5a290e142218d3286a9cac",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="GatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="pet-sitter-api.gateway.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.sakamoto.gateway.GatewayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -92,6 +133,9 @@
       <updated>1672756399665</updated>
       <workItem from="1672756400992" duration="12709000" />
       <workItem from="1672783019542" duration="6837000" />
+      <workItem from="1672820535123" duration="7031000" />
+      <workItem from="1672831390145" duration="529000" />
+      <workItem from="1672831938485" duration="28859000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit of empty project with Gradle">
       <created>1672782578344</created>
@@ -100,7 +144,21 @@
       <option name="project" value="LOCAL" />
       <updated>1672782578344</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Updated README.md file to reflect the latest changes to the project architecture.">
+      <created>1672824413931</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1672824413931</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added Class and Use Case diagrams to better visualize the system as a whole.">
+      <created>1672824457846</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1672824457846</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -109,6 +167,10 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Initial commit of empty project with Gradle" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit of empty project with Gradle" />
+    <MESSAGE value="Updated UML diagrams and README.md file to reflect the latest changes to the project architecture." />
+    <MESSAGE value="Updated README.md file to reflect the latest changes to the project architecture." />
+    <MESSAGE value="Added Class and Use Case diagrams to better visualize the system as a whole." />
+    <MESSAGE value="Created gateway module to handle Api gateway operations such as security, logging, and redirection." />
+    <option name="LAST_COMMIT_MESSAGE" value="Created gateway module to handle Api gateway operations such as security, logging, and redirection." />
   </component>
 </project>
