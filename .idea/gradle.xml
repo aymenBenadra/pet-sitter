@@ -9,7 +9,8 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/gateway" />
+            <option value="$PROJECT_DIR$/common" />
+            <option value="$PROJECT_DIR$/feed" />
           </set>
         </option>
       </GradleProjectSettings>

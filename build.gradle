@@ -4,17 +4,17 @@ plugins {
 }
 
 subprojects {
-    apply plugin: "java"
     apply plugin: "io.spring.dependency-management"
-
-    repositories {
-        mavenCentral()
-    }
+    apply plugin: 'java'
 
     configurations {
         compileOnly {
             extendsFrom annotationProcessor
         }
+    }
+
+    repositories {
+        mavenCentral()
     }
 
     dependencyManagement {
@@ -25,6 +25,7 @@ subprojects {
             dependency "io.jsonwebtoken:jjwt-impl:${jjwtVersion}"
             dependency "io.jsonwebtoken:jjwt-jackson:${jjwtVersion}"
             dependency "org.modelmapper:modelmapper:${modelMapperVersion}"
+            dependency "com.mysql:mysql-connector-j:${mysqlConnectorVersion}"
         }
     }
 }

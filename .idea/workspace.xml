@@ -4,23 +4,49 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53287dd5-de00-4d79-ad9f-f1c91c6b9bbd" name="Changes" comment="Created gateway module to handle Api gateway operations such as security, logging, and redirection.">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/com/sakamoto/gateway/GatewayApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/com/sakamoto/gateway/adapter/in/web/ProxyController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/com/sakamoto/gateway/adapter/out/logging/LoggingAspect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/com/sakamoto/gateway/application/port/in/RedirectHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/com/sakamoto/gateway/application/service/RedirectHandlerImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/com/sakamoto/gateway/config/WebConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/com/sakamoto/gateway/domain/PredicateDefinition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/com/sakamoto/gateway/domain/RouteDefinition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+    <list default="true" id="53287dd5-de00-4d79-ad9f-f1c91c6b9bbd" name="Changes" comment="R">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/comm/sakamoto/common/annotation/Adapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/comm/sakamoto/common/annotation/UseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/comm/sakamoto/common/model/PetEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/comm/sakamoto/common/model/PetImageEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/comm/sakamoto/common/model/PetType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/comm/sakamoto/common/model/PostEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/comm/sakamoto/common/model/PostStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/comm/sakamoto/common/model/RequestEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/comm/sakamoto/common/model/RequestId.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/comm/sakamoto/common/model/RequestStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/comm/sakamoto/common/model/UserEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feed/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/FeedApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/adapter/in/rest/PostsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/adapter/out/logging/LoggingAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/adapter/out/persistence/PostMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/adapter/out/persistence/PostRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/adapter/out/pets/PetsAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/adapter/out/users/UsersAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/core/port/in/rest/GetPostsUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/core/port/in/rest/PostDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/core/port/out/pets/LoadPetPort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/core/port/out/users/LoadUserPort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/core/service/FeedService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feed/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feed/src/test/java/com/sakamoto/feed/FeedApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML Diagrams/class diagram.puml" beforeDir="false" afterPath="$PROJECT_DIR$/UML Diagrams/class diagram.puml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/sakamoto/gateway/GatewayApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/sakamoto/gateway/adapter/out/logging/LoggingAspect.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,8 +54,20 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+      <option value="module" />
+    </option>
+  </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/common">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/feed">
       <ProjectState />
     </projectState>
   </component>
@@ -42,22 +80,18 @@
         <task path="$PROJECT_DIR$/gateway">
           <activation />
         </task>
+        <task path="$PROJECT_DIR$/common">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/feed">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="pet-sitter-api" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="pet-sitter-api" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="pet-sitter-api" type="f1a62948:ProjectNode" />
-                <item name="gateway" type="2d1252cf:ModuleNode" />
               </path>
             </expand>
             <select />
@@ -71,21 +105,34 @@
       <list>
         <option value="UML Class" />
         <option value="UML Use Case" />
-        <option value="Record" />
+        <option value="com.haulmont.jpb.JpaEntity" />
+        <option value="com.haulmont.jpb.JpaRepository" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Record" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="dynamic-routing" />
+        <entry key="$PROJECT_DIR$" value="dynamic_routing" />
       </map>
     </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="2Jotizj4r5N0fivm4oryXn1ZHLp" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -110,11 +157,48 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "spring.configuration.checksum": "4426be60cc5a290e142218d3286a9cac",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "spring.configuration.checksum": "cf9d59e1f852cc1e87b443d4f1bf8316",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="comm.sakamoto.common.model" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="comm.sakamoto.common.annotation" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.GatewayApplication">
+    <configuration name="CommonApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="common.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="comm.sakamoto.common.CommonApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FeedApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="pet-sitter-api.feed.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.sakamoto.feed.FeedApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FeedApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="feed.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.sakamoto.feed.FeedApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="pet-sitter-api.gateway.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.sakamoto.gateway.GatewayApplication" />
@@ -135,7 +219,9 @@
       <workItem from="1672783019542" duration="6837000" />
       <workItem from="1672820535123" duration="7031000" />
       <workItem from="1672831390145" duration="529000" />
-      <workItem from="1672831938485" duration="28859000" />
+      <workItem from="1672831938485" duration="60820000" />
+      <workItem from="1673004757544" duration="1690000" />
+      <workItem from="1673016191134" duration="15689000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit of empty project with Gradle">
       <created>1672782578344</created>
@@ -158,11 +244,43 @@
       <option name="project" value="LOCAL" />
       <updated>1672824457846</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Created gateway module to handle Api gateway operations such as security, logging, and redirection.">
+      <created>1672875784418</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1672875784419</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Created Logging aspect to handle logging within controllers and module adapters.">
+      <created>1672875833742</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1672875833742</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Attempting dynamic routing using application.yml properties.">
+      <created>1672875976447</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1672875976447</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -171,6 +289,8 @@
     <MESSAGE value="Updated README.md file to reflect the latest changes to the project architecture." />
     <MESSAGE value="Added Class and Use Case diagrams to better visualize the system as a whole." />
     <MESSAGE value="Created gateway module to handle Api gateway operations such as security, logging, and redirection." />
-    <option name="LAST_COMMIT_MESSAGE" value="Created gateway module to handle Api gateway operations such as security, logging, and redirection." />
+    <MESSAGE value="Created Logging aspect to handle logging within controllers and module adapters." />
+    <MESSAGE value="Attempting dynamic routing using application.yml properties." />
+    <option name="LAST_COMMIT_MESSAGE" value="Attempting dynamic routing using application.yml properties." />
   </component>
 </project>

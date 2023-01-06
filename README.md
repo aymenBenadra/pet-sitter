@@ -19,17 +19,47 @@ I'm using a Multi-module architecture with the Hexagonal Architecture pattern fo
 ### Modules
  
     pet-sitter-api (parent)
-    ├──  pet-sitter-api-gateway: Redirect requests to the right module (cercuit breaker, rate limiter, authorization (JWT))
-    ├──  pet-sitter-api-persistence: Handle database access and entities (JPA, mapping)
+    ├──  pet-sitter-api-feed: Core module to handle posts management (circuit breaker, rate limiter, authorization (JWT))
     ├──  pet-sitter-api-auth: Handle authentication (login, register)
     ├──  pet-sitter-api-pets: Handle pet management (add, update, delete, ...)
-    ├──  pet-sitter-api-feed: Handle posts management (add, update, delete, ...)
     ├──  pet-sitter-api-leaderboard: Handle leaderboard (get most active users)
     └──  pet-sitter-api-adoption: Handle adoption requests (get requests, accept, reject)
 
+#### Module architecture
+
+    feature-name
+    ├── src
+    │   ├── main
+    │   │   ├── java
+    │   │   │   └── com
+    │   │   │       └── sakamoto
+    │   │   │           └── module-name
+    │   │   │               ├── config: Configuration classes
+    │   │   │               ├── adapters: Adapters to connect to external services
+    │   │   │               │   ├── in:rest: Rest controllers
+    │   │   │               │   ├── out:module-name: Adapters to connect to other modules
+    │   │   │               │   └── out:persistence: Persistence adapters
+    │   │   │               ├── domain: Domain classes
+    │   │   │               ├── ports: Ports to connect to external services
+    │   │   │               │   ├── in:rest: Rest ports and DTOs
+    │   │   │               │   ├── out:module-name: Ports to connect to other modules
+    │   │   │               │   └── out:persistence: Persistence ports and DTOs
+    │   │   │               └── usecases: Use cases to handle business logic
+    │   │   └── resources
+    │   │       └── application.yml: Application configuration
+    │   └── test
+    │       └── java
+    │           └── com
+    │               └── sakamoto
+    │                   └── feed
+    │                       └── adapters
+    │                           └── rest: Rest controllers tests
+    └── build.gradle: Gradle configuration
+
+
 ### Routes
 
-    /api/v1 (gateway)
+    /api/v1 (core)
     ├──  / (feed)
     │   ├──  /                      : [GET, POST]           : Get all posts or create a new one
     │   ├──  /{postId}              : [GET, PATCH, DELETE]  : Get a post, update it or delete it
@@ -58,7 +88,6 @@ I'm using a Multi-module architecture with the Hexagonal Architecture pattern fo
 - Spring Security
 - Spring HATEOAS
 - Spring Web MVC
-- Spring Web Flux (for reverse proxy)
 - Spring Functional Web Framework
 - Resilience4j (for circuit breaker)
 - Lombok
