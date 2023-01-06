@@ -35,8 +35,6 @@ class Post {
     - title: String
     - description: String
     - price: double
-    - startDate: Date
-    - endDate: Date
     - status: PostStatus
 }
 
@@ -58,9 +56,9 @@ enum RequestStatus {
 
 User "1" *-- "0,*" Post : Creates
 User "1" *-- "0,*" Pet : Owns
-User "0,*" -- "0,*" Pet : Adopts
+User "1" -- "0,*" Pet : Adopts
 
-User "1" -l- "0,*" Post : Applies to
+User "0,*" -l- "0,*" Post : "  Applies to"
 (Post, User) -l- Request
 
 Pet "1" *-- "0,*" PetImage : Has
