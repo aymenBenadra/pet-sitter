@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53287dd5-de00-4d79-ad9f-f1c91c6b9bbd" name="Changes" comment="Added Common module which holds common annotations and JPA models for using with the database.">
+    <list default="true" id="53287dd5-de00-4d79-ad9f-f1c91c6b9bbd" name="Changes" comment="Changed a bit in the Readme file to better describe the vision of this project.">
       <change afterPath="$PROJECT_DIR$/feed/build.gradle" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/FeedApplication.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/adapter/in/rest/FeedController.java" afterDir="false" />
@@ -209,7 +209,7 @@
       <workItem from="1673016191134" duration="19885000" />
       <workItem from="1673041399062" duration="17771000" />
       <workItem from="1673230106889" duration="9000" />
-      <workItem from="1673230152409" duration="1356000" />
+      <workItem from="1673230152409" duration="1706000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit of empty project with Gradle">
       <created>1672782578344</created>
@@ -303,7 +303,8 @@
     <MESSAGE value="Updated Class diagram." />
     <MESSAGE value="Removed Gateway module and changed some more stuff, while also adding two more modules {feed, common}." />
     <MESSAGE value="Added Common module which holds common annotations and JPA models for using with the database." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Common module which holds common annotations and JPA models for using with the database." />
+    <MESSAGE value="Changed a bit in the Readme file to better describe the vision of this project." />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed a bit in the Readme file to better describe the vision of this project." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
