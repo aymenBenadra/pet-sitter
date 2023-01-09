@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53287dd5-de00-4d79-ad9f-f1c91c6b9bbd" name="Changes" comment="Changed a bit in the Readme file to better describe the vision of this project.">
+    <list default="true" id="53287dd5-de00-4d79-ad9f-f1c91c6b9bbd" name="Changes" comment="Re-registered feed module in global git repo after a problem with having multiple repositories.">
       <change afterPath="$PROJECT_DIR$/feed/build.gradle" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/FeedApplication.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/adapter/in/rest/FeedController.java" afterDir="false" />
@@ -31,8 +31,9 @@
       <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/domain/User.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/utils/PostMapper.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/feed/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,6 +106,7 @@
         <entry key="$PROJECT_DIR$" value="dynamic_routing" />
       </map>
     </option>
+    <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -142,7 +144,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "0d570cb2-96df-43cc-80da-7f777e6d0afe",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
     "spring.configuration.checksum": "cf9d59e1f852cc1e87b443d4f1bf8316",
     "vue.rearranger.settings.migration": "true"
   }
@@ -209,7 +211,7 @@
       <workItem from="1673016191134" duration="19885000" />
       <workItem from="1673041399062" duration="17771000" />
       <workItem from="1673230106889" duration="9000" />
-      <workItem from="1673230152409" duration="1706000" />
+      <workItem from="1673230152409" duration="3191000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit of empty project with Gradle">
       <created>1672782578344</created>
@@ -274,7 +276,77 @@
       <option name="project" value="LOCAL" />
       <updated>1673036343732</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Changed a bit in the Readme file to better describe the vision of this project.">
+      <created>1673231885942</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1673231885942</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Added Feed module configuration and dependencies.">
+      <created>1673232217577</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1673232217577</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Created Domain objects for feed module.">
+      <created>1673232242647</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1673232242647</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Created in:ports for the Rest Controllers of feed module.">
+      <created>1673232297226</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1673232297226</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Created out:ports for the Persistence adapter and other OUT Ports of feed module.">
+      <created>1673232422284</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1673232422284</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Created core services of feed module.">
+      <created>1673232475113</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1673232475113</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Created Post Model Mapper of feed module to map different domain object faces.">
+      <created>1673232545121</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1673232545121</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Created Logging and Persistence adapters to handle interactions with external services.">
+      <created>1673232651641</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1673232651641</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Created in:rest: Rest Controllers (adapters) to handle inbound requests via Rest endpoints.">
+      <created>1673232755110</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1673232755110</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Created Main application to bootstrap Spring boot.">
+      <created>1673232812078</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1673232812078</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -293,6 +365,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/feed" />
+    </ignored-roots>
     <MESSAGE value="Initial commit of empty project with Gradle" />
     <MESSAGE value="Updated UML diagrams and README.md file to reflect the latest changes to the project architecture." />
     <MESSAGE value="Updated README.md file to reflect the latest changes to the project architecture." />
@@ -304,7 +379,17 @@
     <MESSAGE value="Removed Gateway module and changed some more stuff, while also adding two more modules {feed, common}." />
     <MESSAGE value="Added Common module which holds common annotations and JPA models for using with the database." />
     <MESSAGE value="Changed a bit in the Readme file to better describe the vision of this project." />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed a bit in the Readme file to better describe the vision of this project." />
+    <MESSAGE value="Added Feed module configuration and dependencies." />
+    <MESSAGE value="Created Domain objects for feed module." />
+    <MESSAGE value="Created in:ports for the Rest Controllers of feed module." />
+    <MESSAGE value="Created out:ports for the Persistence adapter and other OUT Ports of feed module." />
+    <MESSAGE value="Created core services of feed module." />
+    <MESSAGE value="Created Post Model Mapper of feed module to map different domain object faces." />
+    <MESSAGE value="Created Logging and Persistence adapters to handle interactions with external services." />
+    <MESSAGE value="Created in:rest: Rest Controllers (adapters) to handle inbound requests via Rest endpoints." />
+    <MESSAGE value="Created Main application to bootstrap Spring boot." />
+    <MESSAGE value="Re-registered feed module in global git repo after a problem with having multiple repositories." />
+    <option name="LAST_COMMIT_MESSAGE" value="Re-registered feed module in global git repo after a problem with having multiple repositories." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

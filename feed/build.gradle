@@ -1,0 +1,36 @@
+apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+
+dependencies {
+    implementation project(':common')
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework:spring-aspects'
+    implementation 'org.modelmapper:modelmapper'
+
+    compileOnly 'org.projectlombok:lombok'
+
+    runtimeOnly 'com.mysql:mysql-connector-j'
+
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    annotationProcessor 'org.projectlombok:lombok'
+}
+
+bootBuildImage {
+    imageName = "aymenbenadra/$project.rootProject.name-$project.name"
+}
+
+bootJar {
+    layered {
+        application {
+            intoLayer("spring-boot-loader") {
+                include "org/springframework/boot/loader/**"
+            }
+            intoLayer("application")
+        }
+        dependencies {
+            intoLayer("dependencies")
+        }
+        layerOrder = ["dependencies", "spring-boot-loader", "application"]
+    }
+}
