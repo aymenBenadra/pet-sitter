@@ -1,6 +1,10 @@
 package comm.sakamoto.common.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
 import lombok.*;
 
 import java.util.ArrayList;
@@ -21,13 +25,20 @@ public class UserEntity {
 
     @Column(unique = true)
     @NonNull
+    @NotBlank
+    @Min(10)
+    @Max(50)
     private String username;
 
     @NonNull
+    @NotBlank
+    @Min(4)
+    @Max(50)
     private String password;
 
     @Column(unique = true)
     @NonNull
+    @Email
     private String email;
 
     @NonNull

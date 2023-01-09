@@ -3,6 +3,7 @@ package com.sakamoto.feed.adapter.in.rest;
 import com.sakamoto.feed.core.port.in.rest.ManagePostsUseCase;
 import com.sakamoto.feed.core.port.in.rest.PostCommand;
 import com.sakamoto.feed.core.port.in.rest.PostDTO;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,14 +18,15 @@ public class PostsController {
     private final ManagePostsUseCase managePostsUseCase;
 
     @PostMapping("/")
-    public ResponseEntity<?> createPost(@RequestBody PostCommand command) {
+    public ResponseEntity<ResponseRecord<PostDTO>> createPost(@Valid @RequestBody PostCommand command) {
         PostDTO post = managePostsUseCase.createPost(command);
-        return ResponseEntity.created(URI.create("/" + post.id())).body(post);
+        return ResponseEntity.created(URI.create("/" + post.id()))
+                .body(new ResponseRecord<>(HttpStatus.CREATED, post));
     }
 
     @PutMapping("/{id}")
-    public PostDTO updatePost(@PathVariable Long id, @RequestBody PostCommand command) {
-        return managePostsUseCase.updatePost(id, command);
+    public ResponseRecord<PostDTO> updatePost(@PathVariable Long id, @Valid @RequestBody PostCommand command) {
+        return new ResponseRecord<>(managePostsUseCase.updatePost(id, command));
     }
 
     @PatchMapping("/{id}")

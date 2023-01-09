@@ -1,6 +1,8 @@
 package comm.sakamoto.common.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
 import java.util.Objects;
@@ -18,11 +20,13 @@ public class PetImageEntity {
     private Long id;
 
     @NonNull
+    @NotBlank
     private String url;
 
     @ManyToOne
     @JoinColumn(name = "pet_id")
     @NonNull
+    @NotNull
     private PetEntity pet;
 
     @Override

@@ -8,3 +8,4 @@ rootProject.name = 'pet-sitter-api'
 
 include 'common'
 include 'feed'
+include 'auth'

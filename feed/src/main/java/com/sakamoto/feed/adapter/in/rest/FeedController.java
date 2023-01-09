@@ -17,8 +17,8 @@ public class FeedController {
     private final GetPostsUseCase getPostsUseCase;
 
     @GetMapping("/")
-    public List<PostDTO> getPosts(@RequestParam(name = "status", required = false) PostStatus status,
-                                  @RequestParam(name = "user", required = false) Long userId) {
+    public ResponseRecord<List<PostDTO>> getPosts(@RequestParam(name = "status", required = false) PostStatus status,
+                                                  @RequestParam(name = "user", required = false) Long userId) {
         List<PostDTO> posts;
         if (userId != null && status != null) {
             posts = getPostsUseCase.getPostsByUserIdAndStatus(userId, status);
@@ -29,11 +29,11 @@ public class FeedController {
         } else {
             posts = getPostsUseCase.getAllPosts();
         }
-        return posts;
+        return new ResponseRecord<>(posts);
     }
 
     @GetMapping("/{id}")
-    public PostDTO getPostById(@PathVariable Long id) {
-        return getPostsUseCase.getPostById(id);
+    public ResponseRecord<PostDTO> getPostById(@PathVariable Long id) {
+        return new ResponseRecord<>(getPostsUseCase.getPostById(id));
     }
 }

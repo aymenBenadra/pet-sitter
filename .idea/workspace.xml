@@ -4,36 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53287dd5-de00-4d79-ad9f-f1c91c6b9bbd" name="Changes" comment="Re-registered feed module in global git repo after a problem with having multiple repositories.">
-      <change afterPath="$PROJECT_DIR$/feed/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/FeedApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/adapter/in/rest/FeedController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/adapter/in/rest/PostsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/adapter/in/rest/RestControllerAdvisor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/adapter/out/logging/LoggingAspect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/adapter/out/persistence/PersistenceAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/adapter/out/persistence/PostRepository.java" afterDir="false" />
+    <list default="true" id="53287dd5-de00-4d79-ad9f-f1c91c6b9bbd" name="Changes" comment="Added Spring Validation and Jakarta validation API to modules for validating user enteries in Controller and Entity level (external sources).">
+      <change afterPath="$PROJECT_DIR$/auth/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth/src/main/java/com/sakamoto/auth/AuthApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth/src/main/java/com/sakamoto/auth/core/port/in/rest/LoginUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth/src/main/java/com/sakamoto/auth/core/port/in/rest/RegisterUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth/src/main/java/com/sakamoto/auth/domain/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/adapter/in/rest/AuthController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/adapter/in/rest/ResponseRecord.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/adapter/out/pets/PetsAdapter.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/adapter/out/users/UsersAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/core/port/in/rest/GetPostsUseCase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/core/port/in/rest/ManagePostsUseCase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/core/port/in/rest/PostCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/core/port/in/rest/PostDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/core/port/out/persistence/GetPostsPort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/core/port/out/persistence/ManagePostsPort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/core/port/out/persistence/PostNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/core/port/out/pets/LoadPetPort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/core/port/out/users/LoadUserPort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/core/service/FeedService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/core/service/PostsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/domain/Pet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/domain/Post.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/domain/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/utils/PostMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feed/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/common/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/comm/sakamoto/common/model/PetEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/comm/sakamoto/common/model/PetEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/comm/sakamoto/common/model/PetImageEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/comm/sakamoto/common/model/PetImageEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/comm/sakamoto/common/model/PostEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/comm/sakamoto/common/model/PostEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/comm/sakamoto/common/model/RequestEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/comm/sakamoto/common/model/RequestEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/comm/sakamoto/common/model/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/comm/sakamoto/common/model/UserEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feed/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/feed/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/adapter/in/rest/FeedController.java" beforeDir="false" afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/adapter/in/rest/FeedController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/adapter/in/rest/PostsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/adapter/in/rest/PostsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/adapter/in/rest/RestControllerAdvisor.java" beforeDir="false" afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/adapter/in/rest/RestControllerAdvisor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/core/port/in/rest/PostCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/core/port/in/rest/PostCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +44,9 @@
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/auth">
       <ProjectState />
     </projectState>
     <projectState path="$PROJECT_DIR$/common">
@@ -79,6 +78,50 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="pet-sitter-api" type="f1a62948:ProjectNode" />
               </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="pet-sitter-api" type="f1a62948:ProjectNode" />
+                <item name="common" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="pet-sitter-api" type="f1a62948:ProjectNode" />
+                <item name="common" type="2d1252cf:ModuleNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="pet-sitter-api" type="f1a62948:ProjectNode" />
+                <item name="common" type="2d1252cf:ModuleNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+                <item name="compileClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="pet-sitter-api" type="f1a62948:ProjectNode" />
+                <item name="common" type="2d1252cf:ModuleNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+                <item name="compileClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
+                <item name="org.springframework:spring-context:6.0.2" type="b3323d55:ExternalSystemViewDefaultContributor$DependencyExternalSystemNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="pet-sitter-api" type="f1a62948:ProjectNode" />
+                <item name="common" type="2d1252cf:ModuleNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+                <item name="compileClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
+                <item name="org.springframework:spring-context:6.0.2" type="b3323d55:ExternalSystemViewDefaultContributor$DependencyExternalSystemNode" />
+                <item name="org.springframework:spring-aop:6.0.2" type="b3323d55:ExternalSystemViewDefaultContributor$DependencyExternalSystemNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="pet-sitter-api" type="f1a62948:ProjectNode" />
+                <item name="common" type="2d1252cf:ModuleNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+                <item name="compileClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
+                <item name="org.springframework:spring-context:6.0.2" type="b3323d55:ExternalSystemViewDefaultContributor$DependencyExternalSystemNode" />
+                <item name="org.springframework:spring-expression:6.0.2" type="b3323d55:ExternalSystemViewDefaultContributor$DependencyExternalSystemNode" />
+              </path>
             </expand>
             <select />
           </tree_state>
@@ -93,10 +136,10 @@
         <option value="UML Use Case" />
         <option value="com.haulmont.jpb.JpaEntity" />
         <option value="com.haulmont.jpb.JpaRepository" />
-        <option value="Interface" />
         <option value="Enum" />
-        <option value="Record" />
         <option value="Class" />
+        <option value="Interface" />
+        <option value="Record" />
       </list>
     </option>
   </component>
@@ -107,6 +150,7 @@
       </map>
     </option>
     <option name="ROOT_SYNC" value="SYNC" />
+    <option name="SIGN_OFF_COMMIT" value="true" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -145,11 +189,14 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "spring.configuration.checksum": "cf9d59e1f852cc1e87b443d4f1bf8316",
+    "spring.configuration.checksum": "e51f155d991a02715f599f4f4a795bd9",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.sakamoto.auth.domain" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="comm.sakamoto.common.model" />
     </key>
@@ -165,6 +212,20 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.GatewayApplication">
+    <configuration name="AuthApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="pet-sitter-api.auth.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.sakamoto.auth.AuthApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuthApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="auth.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.sakamoto.auth.AuthApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CommonApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="common.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="comm.sakamoto.common.CommonApplication" />
@@ -211,7 +272,8 @@
       <workItem from="1673016191134" duration="19885000" />
       <workItem from="1673041399062" duration="17771000" />
       <workItem from="1673230106889" duration="9000" />
-      <workItem from="1673230152409" duration="3191000" />
+      <workItem from="1673230152409" duration="7000000" />
+      <workItem from="1673239066222" duration="3766000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit of empty project with Gradle">
       <created>1672782578344</created>
@@ -346,7 +408,21 @@
       <option name="project" value="LOCAL" />
       <updated>1673232812078</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Re-registered feed module in global git repo after a problem with having multiple repositories.">
+      <created>1673233449152</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1673233449152</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Re-registered feed module in global git repo after a problem with having multiple repositories.&#10;&#10;Signed-off-by: Mohammed-Aymen Benadra &lt;aymanbenadra16@gmail.com&gt;">
+      <created>1673233520792</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1673233520792</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -389,7 +465,11 @@
     <MESSAGE value="Created in:rest: Rest Controllers (adapters) to handle inbound requests via Rest endpoints." />
     <MESSAGE value="Created Main application to bootstrap Spring boot." />
     <MESSAGE value="Re-registered feed module in global git repo after a problem with having multiple repositories." />
-    <option name="LAST_COMMIT_MESSAGE" value="Re-registered feed module in global git repo after a problem with having multiple repositories." />
+    <MESSAGE value="Re-registered feed module in global git repo after a problem with having multiple repositories.&#10;&#10;Signed-off-by: Mohammed-Aymen Benadra &lt;aymanbenadra16@gmail.com&gt;" />
+    <MESSAGE value="Added Spring Validation and Jakarta validation API to modules for validating user enteries in Controller and Entity level (external sources)." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Spring Validation and Jakarta validation API to modules for validating user enteries in Controller and Entity level (external sources)." />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

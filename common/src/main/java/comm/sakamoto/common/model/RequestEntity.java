@@ -1,6 +1,7 @@
 package comm.sakamoto.common.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
 import java.util.Objects;
@@ -19,14 +20,17 @@ public class RequestEntity {
     @ManyToOne
     @MapsId("user_id")
     @JoinColumn(name = "user_id")
+    @NotNull
     private UserEntity user;
 
     @ManyToOne
     @MapsId("post_id")
     @JoinColumn(name = "post_id")
+    @NotNull
     private PostEntity post;
 
     @Enumerated(EnumType.STRING)
+    @NotNull
     private RequestStatus status;
 
     @Override

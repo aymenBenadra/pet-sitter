@@ -1,6 +1,10 @@
 package comm.sakamoto.common.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
 import java.util.ArrayList;
@@ -19,23 +23,27 @@ public class PetEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotBlank
     private String name;
 
     @Enumerated(EnumType.STRING)
     private PetType type;
 
+    @Min(0)
+    @Max(150)
     private int age;
 
+    @NotBlank
     private String description;
 
     @ManyToOne
     @JoinColumn(name = "user_id")
     @NonNull
+    @NotNull
     private UserEntity owner;
 
     @ManyToOne
     @JoinColumn(name = "sitter_id")
-    @NonNull
     private UserEntity sitter;
 
     @OneToMany(mappedBy = "pet", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
