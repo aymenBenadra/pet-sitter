@@ -4,50 +4,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53287dd5-de00-4d79-ad9f-f1c91c6b9bbd" name="Changes" comment="R">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/comm/sakamoto/common/annotation/Adapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/comm/sakamoto/common/annotation/UseCase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/comm/sakamoto/common/model/PetEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/comm/sakamoto/common/model/PetImageEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/comm/sakamoto/common/model/PetType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/comm/sakamoto/common/model/PostEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/comm/sakamoto/common/model/PostStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/comm/sakamoto/common/model/RequestEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/comm/sakamoto/common/model/RequestId.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/comm/sakamoto/common/model/RequestStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/comm/sakamoto/common/model/UserEntity.java" afterDir="false" />
+    <list default="true" id="53287dd5-de00-4d79-ad9f-f1c91c6b9bbd" name="Changes" comment="Added Common module which holds common annotations and JPA models for using with the database.">
       <change afterPath="$PROJECT_DIR$/feed/build.gradle" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/FeedApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/adapter/in/rest/FeedController.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/adapter/in/rest/PostsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/adapter/in/rest/RestControllerAdvisor.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/adapter/out/logging/LoggingAspect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/adapter/out/persistence/PostMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/adapter/out/persistence/PersistenceAdapter.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/adapter/out/persistence/PostRepository.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/adapter/out/pets/PetsAdapter.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/adapter/out/users/UsersAdapter.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/core/port/in/rest/GetPostsUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/core/port/in/rest/ManagePostsUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/core/port/in/rest/PostCommand.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/core/port/in/rest/PostDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/core/port/out/persistence/GetPostsPort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/core/port/out/persistence/ManagePostsPort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/core/port/out/persistence/PostNotFoundException.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/core/port/out/pets/LoadPetPort.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/core/port/out/users/LoadUserPort.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/core/service/FeedService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/core/service/PostsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/domain/Pet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/domain/Post.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/domain/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feed/src/main/java/com/sakamoto/feed/utils/PostMapper.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/feed/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feed/src/test/java/com/sakamoto/feed/FeedApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML Diagrams/class diagram.puml" beforeDir="false" afterPath="$PROJECT_DIR$/UML Diagrams/class diagram.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/sakamoto/gateway/GatewayApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/sakamoto/gateway/adapter/out/logging/LoggingAspect.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,9 +93,9 @@
         <option value="com.haulmont.jpb.JpaEntity" />
         <option value="com.haulmont.jpb.JpaRepository" />
         <option value="Interface" />
-        <option value="Class" />
-        <option value="Record" />
         <option value="Enum" />
+        <option value="Record" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -157,7 +142,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "settings.editor.selected.configurable": "0d570cb2-96df-43cc-80da-7f777e6d0afe",
     "spring.configuration.checksum": "cf9d59e1f852cc1e87b443d4f1bf8316",
     "vue.rearranger.settings.migration": "true"
   }
@@ -221,7 +206,10 @@
       <workItem from="1672831390145" duration="529000" />
       <workItem from="1672831938485" duration="60820000" />
       <workItem from="1673004757544" duration="1690000" />
-      <workItem from="1673016191134" duration="15689000" />
+      <workItem from="1673016191134" duration="19885000" />
+      <workItem from="1673041399062" duration="17771000" />
+      <workItem from="1673230106889" duration="9000" />
+      <workItem from="1673230152409" duration="1356000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit of empty project with Gradle">
       <created>1672782578344</created>
@@ -265,7 +253,28 @@
       <option name="project" value="LOCAL" />
       <updated>1672875976447</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Updated Class diagram.">
+      <created>1673036209951</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1673036209951</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Removed Gateway module and changed some more stuff, while also adding two more modules {feed, common}.">
+      <created>1673036277531</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1673036277531</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Added Common module which holds common annotations and JPA models for using with the database.">
+      <created>1673036343732</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1673036343732</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -291,6 +300,13 @@
     <MESSAGE value="Created gateway module to handle Api gateway operations such as security, logging, and redirection." />
     <MESSAGE value="Created Logging aspect to handle logging within controllers and module adapters." />
     <MESSAGE value="Attempting dynamic routing using application.yml properties." />
-    <option name="LAST_COMMIT_MESSAGE" value="Attempting dynamic routing using application.yml properties." />
+    <MESSAGE value="Updated Class diagram." />
+    <MESSAGE value="Removed Gateway module and changed some more stuff, while also adding two more modules {feed, common}." />
+    <MESSAGE value="Added Common module which holds common annotations and JPA models for using with the database." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Common module which holds common annotations and JPA models for using with the database." />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

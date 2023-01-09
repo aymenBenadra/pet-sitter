@@ -19,11 +19,12 @@ I'm using a Multi-module architecture with the Hexagonal Architecture pattern fo
 ### Modules
  
     pet-sitter-api (parent)
-    ├──  pet-sitter-api-feed: Core module to handle posts management (circuit breaker, rate limiter, authorization (JWT))
+    ├──  pet-sitter-api-feed: Core module to handle posts management (add, update, delete, read, close) plus (circuit breaker, rate limiter, authorization (JWT))
     ├──  pet-sitter-api-auth: Handle authentication (login, register)
     ├──  pet-sitter-api-pets: Handle pet management (add, update, delete, ...)
     ├──  pet-sitter-api-leaderboard: Handle leaderboard (get most active users)
-    └──  pet-sitter-api-adoption: Handle adoption requests (get requests, accept, reject)
+    ├──  pet-sitter-api-sitter: Handle pet sitting requests (get requests, accept, reject)
+    └──  pet-sitter-api-common: Common module for all modules (JPA Entities, annotations, ...)
 
 #### Module architecture
 
@@ -36,14 +37,14 @@ I'm using a Multi-module architecture with the Hexagonal Architecture pattern fo
     │   │   │           └── module-name
     │   │   │               ├── config: Configuration classes
     │   │   │               ├── adapters: Adapters to connect to external services
-    │   │   │               │   ├── in:rest: Rest controllers
-    │   │   │               │   ├── out:module-name: Adapters to connect to other modules
-    │   │   │               │   └── out:persistence: Persistence adapters
+    │   │   │               │   ├── in:rest: Rest controllers <|────────────────────────────────────┐
+    │   │   │               │   ├── out:module-name: Adapters to connect to other modules <|──────┐ │
+    │   │   │               │   └── out:persistence: Persistence adapters <|────────────────────┐ │ │
+    │   │   │               ├── ports: Ports to connect to external services                    │ │ │
+    │   │   │               │   ├── in:rest: Rest ports and DTOs ───────────────────────────────│─│─┘
+    │   │   │               │   ├── out:module-name: Ports to connect to other modules ─────────│─┘
+    │   │   │               │   └── out:persistence: Persistence ports and entities ────────────┘
     │   │   │               ├── domain: Domain classes
-    │   │   │               ├── ports: Ports to connect to external services
-    │   │   │               │   ├── in:rest: Rest ports and DTOs
-    │   │   │               │   ├── out:module-name: Ports to connect to other modules
-    │   │   │               │   └── out:persistence: Persistence ports and DTOs
     │   │   │               └── usecases: Use cases to handle business logic
     │   │   └── resources
     │   │       └── application.yml: Application configuration
@@ -63,7 +64,7 @@ I'm using a Multi-module architecture with the Hexagonal Architecture pattern fo
     ├──  / (feed)
     │   ├──  /                      : [GET, POST]           : Get all posts or create a new one
     │   ├──  /{postId}              : [GET, PATCH, DELETE]  : Get a post, update it or delete it
-    │   │   └──  /requests (adoption)
+    │   │   └──  /requests (sitter)
     │   │       ├──  /              : [GET, POST]           : Get all adoption requests or create a new one
     │   │       └──  /{requestId}   : [GET, PATCH, DELETE]  : Get an adoption request, accept or reject it, or delete it
     │   └──  /leaderboard (leaderboard)
@@ -83,13 +84,11 @@ I'm using a Multi-module architecture with the Hexagonal Architecture pattern fo
 - Gradle
 - Spring Boot
 - Spring Data JPA
-- Spring Data REST
 - Spring Boot Actuator
 - Spring Security
-- Spring HATEOAS
 - Spring Web MVC
 - Spring Functional Web Framework
-- Resilience4j (for circuit breaker)
+- Resilience4j (for circuit breaking and rate limiting)
 - Lombok
 - ModelMapper
 
